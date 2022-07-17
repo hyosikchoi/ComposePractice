@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kr.co.composepractice.ui.theme.ComposePracticeTheme
@@ -33,10 +34,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Column() {
-        Text(text = "Hello $name")
-        Text(text = "Hello $name")
-        Text(text = "Hello $name")
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .height(100.dp)
+    ) {
+        Text(text = name)
+        Text(modifier = Modifier.align(Alignment.BottomEnd), text = name)
     }
 }
 
