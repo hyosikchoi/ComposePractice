@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ComposePractice"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LazyColumnEx"
+            android:name=".ui.SnackBar"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposePractice">
