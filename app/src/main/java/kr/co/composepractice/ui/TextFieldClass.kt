@@ -28,10 +28,15 @@ class TextFieldClass : ComponentActivity() {
             mutableStateOf("")
         }
 
+        val anotherTextState = remember {
+            mutableStateOf("")
+        }
+
         BoxWithConstraints(
             modifier = Modifier.fillMaxSize(),
         ) {
             TextField(modifier = Modifier.align(Alignment.Center), value = textState.value, onValueChange = { textValue -> textState.value = textValue} )
+            TextField(modifier = Modifier.align(Alignment.BottomStart), value = anotherTextState.value, onValueChange = { textValue -> anotherTextState.value = textValue} )
         }
 
     }
